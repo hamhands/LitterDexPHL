@@ -1,4 +1,4 @@
-d3.json("data2.json", function(error, data) {
+d3.json("site/data2.json", function(error, data) {
     console.log(error)
    
     var id_map = {}
@@ -9,7 +9,7 @@ d3.json("data2.json", function(error, data) {
     var map = L.mapbox.map('map', 'hamhands.ij464p4n')
 	.setView([40.003, -75.12], 11);
     
-    var usLayer = omnivore.topojson("philly.json")
+    var usLayer = omnivore.topojson("site/philly.json")
 	.on('click', handleClick)
 	.on('ready', colorMap)
 	.addTo(map);
